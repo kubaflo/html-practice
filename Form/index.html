@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="background-div">
+        <header>
+            <h1 class="bold">freeCodeCamp Survey Form</h1>
+            <p>Thank you for taking the time to help us improve the platform</p>
+        </header>
+
+        <main>
+            <div id="container">
+                <form action="post">
+                    <fieldset>
+                        <legend>Name</legend>
+                        <input required placeholder="Type your name" type="text">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Email</legend>
+                        <input required placeholder="Type your email" type="email">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Age (optional)</legend>
+                        <input placeholder="Age" type="number" min="20" max="1234">
+                    </fieldset>
+                    <fieldset>
+                        <legend>Which option best describes your current role?</legend>
+                        <select>
+                            <option>Frontend</option>
+                            <option>Backend</option>
+                            <option>Fullstack</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Would you recommend freeCodeCamp to a friend?</legend>
+                        <label class="inline"><input type="radio" name="recommend">Definitely</label>
+                        <label class="inline"><input type="radio" name="recommend">Maybe</label>
+                        <label class="inline"><input type="radio" name="recommend">Not sure</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend> What would you like to see improved? (Check all that apply) </legend>
+                        <label class="inline"><input type="checkbox">Front-end Projects</label>
+                        <label class="inline"><input type="checkbox">Back-end Projects</label>
+                        <label class="inline"><input type="checkbox">Fullstack Projects</label>
+                        <label class="inline"><input type="checkbox">Nothing</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Any comments or suggestions?</legend> 
+                        <textarea placeholder="Type your comments or suggestions"></textarea>
+                    </fieldset>
+                    
+                    <button id="button" type="submit">Submit</button>
+                </form>
+            </div>
+        </main>
+
+    </div>
+</body>
+</html>

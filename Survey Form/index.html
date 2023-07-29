@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Survey Form</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Anaheim&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div id="frame">
+            <div id="container">
+                <header>
+                    <h1>Application For Permission To Date My Daughter</h1>
+                    <h3>Note: Form is to be completed at least 21 days prior to date</h3>
+                </header>
+                <form>
+                    <fieldset>
+                        <legend>Personal Details</legend>
+                        <div>
+                            <label for="name">Name: </label><input id="name" type="text" placeholder="Enter name here">
+                        </div>
+                        <div>
+                            <label for="address">Address: </label><input id="address" type="text" placeholder="Enter address here">
+                        </div>
+                        <div>
+                            <label for="email">Email: </label><input id="email" type="email" placeholder="Enter name here">
+                        </div>
+                        <div>
+                            <label for="phone-number">Phone Number: </label><input id="phone-number" type="number" placeholder="Enter name here">
+                        </div>
+                        <div>
+                            <label>Gender</label>
+                            <div class="flex">
+                                <label><input name="gender" type="radio">Male</label>
+                                <label><input name="gender" type="radio">Female</label>
+                                <label><input name="gender" type="radio">Other</label>
+                            </div>
+                        </div>
+                        <div>
+                            <label>Date of Proposed Outing:</label><input type="date">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Check All That Apply</legend>
+                        <div class="flex">
+                            <label><input type="checkbox">I have tattoos and/or piercings</label>
+                            <label><input type="checkbox">I am more than 2 years older than my daughter</label>
+                            <label><input type="checkbox">I own a panel van or V8 ute</label>
+                            <label><input type="checkbox">I work full-time</label>
+                            <label><input type="checkbox">My parents are rich</label>
+                            <label><input type="checkbox">Is the date at a well lit public location</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="select1">Political Persuasion:</label>
+                        <select id="select1">
+                            <option>Left Wing</option>
+                            <option>Righ Wing</option>
+                            <option>Conservative</option>
+                            <option>Nazi</option>
+                        </select>
+
+                        <label for="select2">Education Level Completed:</label>
+                        <select id="select2">
+                            <option>University</option>
+                            <option>College</option>
+                            <option>None</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset id="essay-section">
+                        <legend>Essay Section</legend>
+                        <p>In 50 words or more explain why you want to date my daughter</p>
+                        <textarea rows="4" placeholder="Enter text here"></textarea>
+
+                        <p>Please upload contact details for 2 references</p>
+                        <textarea rows="4" placeholder="Enter text here"></textarea>
+                        <div class="flex-row">
+                            <h3>Upload Police Clearance Certificate, Bank Statement and Medical Certifiates here:</h3>
+                            <button>Attach Files</button>
+                        </div>
+                    </fieldset>
+                    <button id="submit-button">Send Your Application</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
