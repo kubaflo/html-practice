@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Japan</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="styles.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+        <link loading="lazy" href="https://fonts.googleapis.com/css?family=Barlow:400,500,700" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div id="nav-inner">
+                <h3>Japan<span>.</span></h3>
+                <div>
+                    <p id="menu-button-mobile">Menu<i class="fas fa-bars"></i></i></p>   
+                    <div id="nav-menu-desktop">
+                        <p>About</p>
+                        <p>Discover</p>
+                        <p>Plan Your Trip</p>
+                    </div>
+                </div>     
+            </div>
+            <div style="display: none;" id="nav-menu-mobile">
+                <a>About</a>
+                <a>Discover</a>
+                <a>Plan Your Trip</a>
+            </div>
+        </nav>
+        <main>
+            <img id="temple-img" src="https://source.unsplash.com/cddaZDt6uRw">
+            <div id="title-box">
+                <h3>Explore<br>Tokyo</h3>
+            </div>
+            <p id="text-content">
+                Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples.
+            </p>
+
+            <div id="arrows">
+                <i id="left-arrow" class="fas fa-arrow-left"></i>
+                <div id="line"></div>
+                <i id="right-arrow" class="fas fa-arrow-right"></i>
+            </div>
+
+        </main>
+    </body>
+    <script>
+        let nav=document.querySelector("#nav-menu-mobile");
+        document.getElementById("menu-button-mobile").onclick = ()=>{
+            nav.style.display!="none"
+                ? nav.style.display="none"
+                : nav.style.display="flex";
+        }
+
+        document.querySelector("#left-arrow").onclick = () => changeImage(-1);
+        document.querySelector("#right-arrow").onclick = () => changeImage(1);
+        
+        let img=document.querySelector("#temple-img");
+        let title=document.querySelector("#title-box");
+        let content=document.querySelector("#text-content");        
+
+        let cities=[
+            {
+                title: "<h3>Explore<br> Tokyo</h3>",
+                img: "https://source.unsplash.com/cddaZDt6uRw",
+                content: "Tokyo, Japan’s busy capital, mixes the ultramodern and the traditional, from neon-lit skyscrapers to historic temples."
+            },
+            {
+                title: "<h3>Explore<br> Kyoto</h3>",
+                img: "https://source.unsplash.com/Pz3EHf-KJfc",
+                content: "Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses."
+            },
+        ];
+        
+        let current=0;
+        function changeImage(dir)
+        {
+            current+=dir;
+            if(current<0)
+                current=cities.length-1;
+            else if(current>=cities.length)
+                current=0;
+
+            img.src=cities[current].img;
+            content.innerHTML=cities[current].content;
+            title.innerHTML=cities[current].title;            
+        }
+        
+    </script>
+</html>
